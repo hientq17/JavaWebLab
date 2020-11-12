@@ -1,0 +1,46 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="struts-default">
+        <action name="home" class="edu.fpt.action.NavigationAction" method="home">
+            <result name="success">views/home.jsp</result>
+        </action>
+        <action name="overview" class="edu.fpt.action.NavigationAction" method="overview">
+            <result name="success">views/overview.jsp</result>
+        </action>
+        <action name="about" class="edu.fpt.action.NavigationAction" method="about">
+            <result name="success">views/about.jsp</result>
+        </action>
+        <action name="contact" class="edu.fpt.action.NavigationAction" method="contact">
+            <result name="success">views/contact.jsp</result>
+        </action>
+        <action name="single-post" class="edu.fpt.action.NavigationAction" method="singlePost">
+            <result name="success">views/singlePost.jsp</result>
+        </action>
+        <action name="list-posts-by-month" class="edu.fpt.action.NavigationAction" method="getListPostsByMonth">
+            <result name="success">views/listPostsByMonth.jsp</result>
+        </action>
+        <!-- account action -->
+        <action name="login" class="edu.fpt.action.AccountAction" method="login">
+            <result type="stream" name="success" ><param name="contentType">text/plain</param></result>
+        </action>
+        <action name="logout" class="edu.fpt.action.AccountAction" method="logout">
+            <result name="success" type="redirect">home</result>
+        </action>
+        <action name="new-post" class="edu.fpt.action.AccountAction" method="newPost">
+            <result name="success" type="redirect">overview</result>
+        </action>
+        <action name="send-feedback" class="edu.fpt.action.AccountAction" method="sendFeedback">
+            <result name="success" type="redirect">contact</result>
+        </action>
+        <action name="like-post" class="edu.fpt.action.AccountAction" method="likePost">
+            <result name="success" type="redirect">home</result>
+        </action>
+        <action name="unlike-post" class="edu.fpt.action.AccountAction" method="unlikePost">
+            <result name="success" type="redirect">home</result>
+        </action>
+    </package>
+</struts>

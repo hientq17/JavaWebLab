@@ -1,0 +1,21 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="struts-default">
+        <action name="home" class="edu.fpt.action.NavigationAction" method="home">
+            <result name="success">views/home.jsp</result>
+        </action>
+        <action name="overview" class="edu.fpt.action.NavigationAction" method="overview">
+            <result name="success">views/overview.jsp</result>
+        </action>
+        <action name="about" class="edu.fpt.action.NavigationAction" method="about">
+            <result name="success">views/about.jsp</result>
+        </action>
+        <action name="post" class="edu.fpt.action.NavigationAction" method="post">
+            <result name="success">views/post.jsp</result>
+        </action>
+    </package>
+</struts>
