@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <constant name="struts.devMode" value="true" />
+    <package name="default" namespace="/" extends="struts-default">
+        <action name="home" class="edu.fpt.action.NavigationAction" method="home">
+            <result name="success">WEB-INF/views/home.jsp</result>
+        </action>
+        <action name="about" class="edu.fpt.action.NavigationAction" method="about">
+            <result name="success">WEB-INF/views/about.jsp</result>
+        </action>
+        <action name="contact" class="edu.fpt.action.NavigationAction" method="contact">
+            <result name="success">WEB-INF/views/contact.jsp</result>
+        </action>
+        <action name="single" class="edu.fpt.action.SingleAction" method="single">
+            <result name="success">WEB-INF/views/single.jsp</result>
+        </action>
+    </package>
+</struts>
